@@ -1,0 +1,165 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://TT2020StyleB-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Card.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Bid.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Opponent.gd" type="Script" id=4]
+[ext_resource path="res://Speech.tscn" type="PackedScene" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 0.960784, 0.85098, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 27
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Opponent" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Card3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -10, 20 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Card2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 20 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Card1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 10, 20 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="DeckBG" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0, 0, 0, 0.313726 )
+position = Vector2( -95, -50 )
+scale = Vector2( 0.36, 0.36 )
+
+[node name="Deck" parent="." instance=ExtResource( 2 )]
+position = Vector2( -95, -50 )
+scale = Vector2( 0.36, 0.36 )
+
+[node name="Bid" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, -50 )
+scale = Vector2( 0.85, 0.85 )
+
+[node name="InfoPivot" type="Node2D" parent="."]
+position = Vector2( 95, -35 )
+
+[node name="Info" type="Label" parent="InfoPivot"]
+margin_left = -30.0
+margin_top = -30.0
+margin_right = 30.0
+margin_bottom = 30.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0.784314, 1 )
+text = "12345
+10/10
++999"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FirstLead" type="Label" parent="."]
+margin_left = -55.0
+margin_top = -110.0
+margin_right = 125.0
+margin_bottom = -80.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.14902, 0.490196, 0.882353, 1 )
+text = "FIRST LEAD"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Trick1" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.156863, 0.156863, 0.156863, 1 )
+position = Vector2( 120, -75 )
+scale = Vector2( 0.06, 0.06 )
+
+[node name="Trick2" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.156863, 0.156863, 0.156863, 1 )
+position = Vector2( 105, -75 )
+scale = Vector2( 0.06, 0.06 )
+
+[node name="Trick4" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.156863, 0.156863, 0.156863, 1 )
+position = Vector2( 75, -75 )
+scale = Vector2( 0.06, 0.06 )
+
+[node name="Trick6" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.156863, 0.156863, 0.156863, 1 )
+position = Vector2( 120, -95 )
+scale = Vector2( 0.06, 0.06 )
+
+[node name="Trick3" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.156863, 0.156863, 0.156863, 1 )
+position = Vector2( 90, -75 )
+rotation = -7.40149e-15
+scale = Vector2( 0.06, 0.06 )
+
+[node name="Trick5" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.156863, 0.156863, 0.156863, 1 )
+position = Vector2( 60, -75 )
+rotation = -7.40149e-15
+scale = Vector2( 0.06, 0.06 )
+
+[node name="Trick7" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.156863, 0.156863, 0.156863, 1 )
+position = Vector2( 105, -95 )
+rotation = -7.40149e-15
+scale = Vector2( 0.06, 0.06 )
+
+[node name="Trick8" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.156863, 0.156863, 0.156863, 1 )
+position = Vector2( 90, -95 )
+rotation = -7.40149e-15
+scale = Vector2( 0.06, 0.06 )
+
+[node name="Trick9" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.156863, 0.156863, 0.156863, 1 )
+position = Vector2( 75, -95 )
+rotation = -7.40149e-15
+scale = Vector2( 0.06, 0.06 )
+
+[node name="Trick10" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.156863, 0.156863, 0.156863, 1 )
+position = Vector2( 60, -95 )
+scale = Vector2( 0.06, 0.06 )
+
+[node name="Trick11" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.156863, 0.156863, 0.156863, 1 )
+position = Vector2( 120, -115 )
+scale = Vector2( 0.06, 0.06 )
+
+[node name="Trick12" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.156863, 0.156863, 0.156863, 1 )
+position = Vector2( 105, -115 )
+scale = Vector2( 0.06, 0.06 )
+
+[node name="Trick13" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.156863, 0.156863, 0.156863, 1 )
+position = Vector2( 90, -115 )
+scale = Vector2( 0.06, 0.06 )
+
+[node name="OffScreen" type="Node2D" parent="."]
+position = Vector2( 0, 100 )
+
+[node name="Speech" parent="." instance=ExtResource( 5 )]
+visible = false
+position = Vector2( 0, -70 )
+z_index = 1
+z_as_relative = false
